@@ -8,7 +8,7 @@ public class MyClass {
     public static int numSum(int x){
         int ctrl=1;
         int sum=0;
-        while(ctrl<x){
+        while(ctrl<=x){
             sum+=ctrl;
             ctrl++;
         }
