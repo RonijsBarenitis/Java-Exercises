@@ -1,9 +1,9 @@
-import java.util.Arrays;  //Line 1 and line 13 implement a function to sort a given array, because the logic in this programm won't work for unsorted arrays
+import java.util.Arrays;  //Line 1 and line 13 implement a function to sort a given array in ascending order, because the logic in this programm won't work for unsorted arrays
 public class MyClass{
        
     public static void main (String[] args) {
         
-        int arr[] = {15,12,1,2,3,1,2,3,4,5,6,12,6,4,5,7,8,8,9,9,10};
+        int arr[] = {11,10,10,9,1,1,2,3,4,4,4,1,4,1,19,5,10,11,12,13,14,14,16,3};
         
         System.out.println("The array before removing duplicates");
         for(int i = 0; i < arr.length; i++){
@@ -12,27 +12,18 @@ public class MyClass{
         
         Arrays.sort(arr); 
         
-        int length = arr.length;  
-        length = removeDup(arr, length); 
         System.out.println("\nThe array after removing duplicates");
-        for (int i = 0; i < length; i++)  
-           System.out.print(arr[i]+" ");  
+        removeDup(arr);  
     }
     
-    public static int removeDup(int arr[], int n){
+    public static void removeDup(int[] arr){
          
-        int[] tempArr = new int[n];  
-        int j = 0;  
-        for (int i = 0; i < n-1; i++){
-            if (arr[i] != arr[i+1]){
-                tempArr[j++] = arr[i];  
-            }  
-         }  
-        tempArr[j++] = arr[n-1];      
-        for (int i = 0; i < j; i++){
-            arr[i] = tempArr[i];  
-        }  
-        
-        return j;  
+         for(int i = 0; i < arr.length; i++){
+             
+             if((i == arr.length-1) || (arr[i] != arr[i+1])){
+                 System.out.print(arr[i] +" ");
+             }
+         }
+          
     }  
 }
