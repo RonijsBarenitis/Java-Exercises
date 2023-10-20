@@ -1,19 +1,35 @@
 public class Auto {
 
-    private final int cilindrata;
+    public int cilindrata;
 
-    private final String targa;
+    public String targa;
 
-    private final String marca;
+    public String marca;
 
-    private final String modello;
+    public String modello;
 
-    public Auto(int cilindrata, String targa, String marca, String modello){
-        this.cilindrata = cilindrata;
-        this.targa = targa;
+    public Auto(String marca, String modello, int cilindrata, String targa){
         this.marca = marca;
         this.modello = modello;
+        this.cilindrata = cilindrata;
+        this.targa = targa;
     }
+
+    public String getTarga(){return targa;}
+
+    public String getMarca(){return marca;}
+
+    public int getCilindrata(){return cilindrata;}
+
+    public String getModello(){return modello;}
+
+    public void setMarca(String marca){this.marca = marca;}
+
+    public void setModello(String modello){this.modello = modello;}
+
+    public void setCilindrata(int cilindrata){this.cilindrata = cilindrata;}
+
+    public void setTarga(String targa){this.targa = targa;}
 
     @Override
     public String toString() {
