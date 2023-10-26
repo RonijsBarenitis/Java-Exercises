@@ -1,11 +1,17 @@
-public class Rettangolo extends Forma {
+public class Rettangolo extends Forma{
 
-    private double altezza = 5;
-    private double lunghezza = 4;
-    public void calcolaArea() {
+    private int altezza;
+    private int lunghezza;
 
-        double areaRett = altezza * lunghezza;
-        System.out.println("Risultato del metodo calcolaArea nella classe Rettangolo, classe genitore Forma è astratta: " + areaRett);
+    public Rettangolo(int altezza, int lunghezza){
+        this.altezza = altezza;
+        this.lunghezza = lunghezza;
     }
 
+    @Override
+    public void calcolaArea() {
+        int area = altezza * lunghezza;
+        System.out.println("Risultato del metodo calcolaArea nella classe Rettangolo: " +area);
+    }
 }
+
