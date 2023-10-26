@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        Rettangolo rettangolo = new Rettangolo();
         Forma forma = new Forma();
-        Triangolo triangolo = new Triangolo();
+        Rettangolo rettangolo = new Rettangolo(5,4);
+        Triangolo triangolo = new Triangolo(5,4);
 
         forma.calcolaArea();
         rettangolo.calcolaArea();
