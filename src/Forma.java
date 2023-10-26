@@ -1,0 +1,4 @@
+interface Forma {
+
+    void calcolaArea();
+}
