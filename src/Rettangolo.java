@@ -1,7 +1,13 @@
 public class Rettangolo extends Forma{
 
-    public int altezza = 5;
-    public int lunghezza = 4;
+    private int altezza;
+    private int lunghezza;
+
+    public Rettangolo(int altezza, int lunghezza){
+        this.altezza = altezza;
+        this.lunghezza = lunghezza;
+    }
+
     @Override
     public void calcolaArea() {
         int area = altezza * lunghezza;
