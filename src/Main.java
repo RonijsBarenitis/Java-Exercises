@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         Integer numerator = null;
-        Integer denominator = 0;
+        Integer denominator = 1;
 
         controlForNull(numerator, denominator);
     }
