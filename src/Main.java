@@ -7,15 +7,15 @@ public class Main {
     public static void main(String[] args) {
 
         Set hashColours = returnHashSet();
-
         System.out.println("Elements of the HashSet \"colours\":\n" +hashColours);
 
-        String colour = "Red";
+        String colour = "White";
+        hashColours.add(colour);
+        System.out.println("Elements of the HashSet \"colours\" after adding an element:\n" +hashColours);
 
         Iterator<String> iterator = hashColours.iterator();
         while(iterator.hasNext()){
             String element = iterator.next();
-
             if(element == colour){
                 iterator.remove();
             }
