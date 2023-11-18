@@ -1,13 +1,8 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
-
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         OffsetDateTime date1 = OffsetDateTime.parse("2023-03-01T13:00:00Z");
         System.out.println("Date1: " +date1);
