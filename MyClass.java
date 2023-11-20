@@ -1,5 +1,5 @@
 public class MyClass {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
       int low = 10;
       int upp = 20;
       int control = 22;
@@ -10,7 +10,8 @@ public class MyClass {
     }
     
      public static boolean intervalControl(int a, int b, int c){
-         boolean d = c >= a && c <= 20;
+         //boolean d = c >= a && c <= 20;  //Riga sbagliata
+         boolean d = c >= a && c <= b; //Riga correta, passando b(int upp), e non un valore direttamente. 
          return d;
      }
 }
