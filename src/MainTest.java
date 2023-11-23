@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import java.time.Month;
 import java.time.OffsetDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -36,5 +37,23 @@ class MainTest {
     void returnLocalizedDateModifiedIfNull() {
         String actual = testing.returnLocalizedDateModified(null);
         assertNull(actual, "If the date passed is null, the result should be null");
+    }
+
+    @Test
+    void checkYearAfterModification() {
+        int result = testing.getYear(dateModified);
+        assertEquals(2024, result, "The year should be 2024");
+    }
+
+    @Test
+    void checkMonthAfterModification() {
+        Month result = testing.getMonth(dateModified);
+        assertEquals(Month.FEBRUARY, result, "The month should be FEBRUARY");
+    }
+
+    @Test
+    void checkDayAfterModification() {
+        int result = testing.getDay(dateModified);
+        assertEquals(8, result, "The day should be: 8");
     }
 }
