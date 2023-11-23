@@ -5,6 +5,7 @@ public class Main {
         user1 = User.getUser();
         User.printAgeAndName(user1);
         System.out.println("User 1: " +user1);
+        
 
         User user2;
         user2 = User.getUser();
