@@ -1,4 +1,4 @@
-package co.develhope.Controller._con.documentazione.in.Swagger;
+package co.develhope.CORS;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
