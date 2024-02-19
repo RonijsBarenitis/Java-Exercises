@@ -1,11 +1,15 @@
-package co.develhope.SpringCustomQueries1.entities;
+package co.develhope.SpringCustomQueries2.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table
+@AllArgsConstructor
+@NoArgsConstructor
 public class Flight {
 
     @Id

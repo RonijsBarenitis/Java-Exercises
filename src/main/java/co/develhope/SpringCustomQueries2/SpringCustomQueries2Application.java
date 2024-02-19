@@ -1,13 +1,13 @@
-package co.develhope.SpringCustomQueries1;
+package co.develhope.SpringCustomQueries2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCustomQueries1Application {
+public class SpringCustomQueries2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCustomQueries1Application.class, args);
+		SpringApplication.run(SpringCustomQueries2Application.class, args);
 	}
 
 }

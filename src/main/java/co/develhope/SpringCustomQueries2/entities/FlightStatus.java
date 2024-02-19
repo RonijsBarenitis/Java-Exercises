@@ -1,4 +1,4 @@
-package co.develhope.SpringCustomQueries1.entities;
+package co.develhope.SpringCustomQueries2.entities;
 
 public enum FlightStatus {
     ONTIME,
