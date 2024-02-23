@@ -22,5 +22,6 @@ public class Flight {
 
     private String toAirport;
 
-    private Enum<FlightStatus> status;
+    @Enumerated(EnumType.STRING)
+    private FlightStatus status;
 }

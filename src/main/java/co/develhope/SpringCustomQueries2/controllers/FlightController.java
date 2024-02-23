@@ -1,6 +1,7 @@
 package co.develhope.SpringCustomQueries2.controllers;
 
 import co.develhope.SpringCustomQueries2.entities.Flight;
+import co.develhope.SpringCustomQueries2.entities.FlightStatus;
 import co.develhope.SpringCustomQueries2.repositories.FlightRepository;
 import co.develhope.SpringCustomQueries2.services.FlightService;
 import org.springframework.data.domain.Page;
@@ -44,7 +45,7 @@ public class FlightController {
     }
 
     @GetMapping("/getflightstwostatus")
-    public List<Flight> getFlightsByTwoStatusParams(@RequestParam (required = false) String status1, @RequestParam (required = false) String status2) {
+    public List<Flight> getFlightsByTwoStatusParams(@RequestParam (required = false) FlightStatus status1, @RequestParam (required = false) FlightStatus status2) {
         return flightService.getFlightsByTwoStatusParams(status1, status2);
     }
 }

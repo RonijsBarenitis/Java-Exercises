@@ -49,7 +49,7 @@ public class FlightService {
         flightRepository.saveAll(allFlights);
     }
 
-    public Enum<FlightStatus> getRandomFlightStatusValue(){
+    public FlightStatus getRandomFlightStatusValue(){
         return FlightStatus.values()[new Random().nextInt(FlightStatus.values().length)];
     }
 
@@ -61,12 +61,7 @@ public class FlightService {
         return flightRepository.findAllByStatus(FlightStatus.ONTIME);
     }
 
-    public List<Flight> getFlightsByTwoStatusParams(String status1, String status2) {
-        if(status1 == null && status2 == null){
-            return null;
-        }
-        FlightStatus s1 = FlightStatus.valueOf(status1);
-        FlightStatus s2 = FlightStatus.valueOf(status2);
+    public List<Flight> getFlightsByTwoStatusParams(FlightStatus s1, FlightStatus s2) {
         return flightRepository.getFlightsByTwoStatusParams(s1,s2);
     }
 }

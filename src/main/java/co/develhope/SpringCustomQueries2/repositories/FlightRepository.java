@@ -13,6 +13,6 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
 
     List<Flight> findAllByStatus(FlightStatus status);
 
-    @Query(value = "SELECT * FROM FLIGHT WHERE STATUS = ?1 OR STATUS = ?2", nativeQuery = true)
+    @Query(value = "select * from Flight f where f.status = :s1 or f.status = :s2", nativeQuery = true)
     List<Flight> getFlightsByTwoStatusParams(FlightStatus s1, FlightStatus s2);
 }
