@@ -1,0 +1,21 @@
+server:
+  port: 5000  # Porta predefinita per l'ambiente di produzione
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 4000  # Porta per l'ambiente di sviluppo
+              #java -jar Deploy_2-0.0.6.jar --spring.profiles.active=test
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 7070  # Porta per l'ambiente di sviluppo
+
+
